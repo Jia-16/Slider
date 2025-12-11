@@ -1,14 +1,50 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <title>Sea creatures</title>
+    </head>
+    <style>
+        body {
+            background-color:mediumpurple;
+            color:rgb(220, 184, 255);
+            font-size:19px;
+        }
+    </style>
     <body>
         <section>
             <img class="mySlides" src="34574_sepia-officinalis-linnaeus-1758.jpg.webp" style="height:500px;">
             <img class="mySlides" src="W2CCrrAaGl5512QAfdKbMmqmxFrodnEaU1OrFzcyOXA.jpg.webp" style="height:500px;">
             <img class="mySlides" src="lungfish.jpg" style="height:500px;">
         </section>
+        <h2>Cuttlefish</h2>
+        <p>The cuttlefish is a clever, soft-bodied marine animal known for its remarkable ability to change color and texture in an
+        instant. Using specialized skin cells, it can blend seamlessly into its surroundings or create dazzling displays to
+        communicate. Despite its name, the cuttlefish is not a fish but a cephalopod, related to squids and octopuses.</p>
+        <br>
+        <h2>Dumbo Octopus</h2>
+        <p>The dumbo octopus is a deep-sea cephalopod named for its ear-like fins that resemble the ears of Disney’s Dumbo. Living
+        thousands of meters below the ocean’s surface, it glides gracefully through the water with gentle fin flaps. This small,
+        soft-bodied creature is known for its calm demeanor and adorable, almost cartoon-like appearance.</p>
+        <br>
+        <h2>Lungfish</h2>
+        <p>The lungfish is a unique freshwater fish known for its ability to breathe air using lung-like organs. During dry
+        seasons, it can burrow into mud and enter a dormant state to survive when water is scarce. With its long, eel-like body
+        and remarkable resilience, the lungfish bridges the evolutionary gap between aquatic and land-dwelling animals.</p>
         <script>
             var myIndex = 0;
             carousel();
+
+            function carousel() {
+                var i;
+                var x=document.getElementsByClassName("mySlides");
+                for (i=0; i < x.length; i++) {
+                    x[i].style.display="none";
+                }
+                myIndex++;
+                if (myIndex > x.length) {myIndex = 1}
+                x[myIndex-1].style.display = "block";
+                setTimeout(carousel, 3000);
+            }
         </script>
     </body>
 </html>
